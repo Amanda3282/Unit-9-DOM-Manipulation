@@ -1,4 +1,4 @@
-//The Document Object Model, or DOM, is essentially the elements you write into your HTML. DOMSelectors allow you to easily access your HTML in JS.
+/* //The Document Object Model, or DOM, is essentially the elements you write into your HTML. DOMSelectors allow you to easily access your HTML in JS.
 
 // DOMSelectors are objects that hold access to the DOM that you can call upon easily at any point in your code.
 
@@ -20,3 +20,33 @@ console.log(DOMSelectors.null);
 console.log(DOMSelectors.nothing);
 // when you look in the console after logging DOMSelectors, you will be able to see the elements that the DOMSelector accesses.
 // if you have a DOMSelector for an element that doesn't exist, it will show up as undefined.
+ */
+
+/* const button = document.getElementById("btn");
+const text = document.querySelector("#text");
+console.log(text);
+ */
+
+/* const DOMSelectors = {
+  button: document.getElementById("btn"),
+  text: document.querySelector("#text"),
+  //empty: document.querySelector(".nothing"),
+  point: document.querySelectorAll(".point"),
+  pointTwo: document.getElementById("pointTwo"),
+};
+console.log(DOMSelectors.point); */
+
+const DOMSelectors = {
+  button: document.getElementById("btn"),
+  text: document.querySelector("#text"),
+  box: document.getElementById("big-black-box"),
+  points: document.querySelectorAll(".point"),
+};
+
+function backgroundAndText(background, text) {
+  background.style.backgroundColor = "red";
+  text.textContent = "this is now a big red box";
+  text.style.fontSize = "40px";
+}
+
+/* backgroundAndText(DOMSelectors.box, DOMSelectors.text); */
